@@ -67,4 +67,14 @@ nav {
   .new-game {
     font-size: 1.25rem;
   }
+  .clicker-container {
+    float: none;
+    width: 100%;
+  }
+  .upgrade {
+    float: none;
+    width: 100%;
+    min-height: 100vh;
+    max-height: max-content;
+  }
 }
