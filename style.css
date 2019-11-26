@@ -1,12 +1,70 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
-nav ul li {
-  list-style-type: none;
+nav {
+  background: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 30px;
+  height: 70px;
 }
-nav ul li a {
-  text-decoration: none;
-  color: green;
+.title {
+  font-family: "Lobster", cursive, sans-serif;
+  font-size: 3rem;
+}
+.new-game {
+  font-size: 1.5rem;
+}
+.new-game:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+
+#game {
+  margin: 0 auto;
+  width: 100%;
+}
+.grid {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+.clicker-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: calc(100vh - 90px);
+  float: left;
+}
+.clicker {
+  background: blue;
+  height: 200px;
+  width: 200px;
+}
+.upgrade {
+  background: red;
+  height: calc(100vh - 90px);
+  overflow-y: scroll;
+  width: 35%;
+  float: right;
+}
+
+@media screen and (max-width: 426px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .new-game {
+    font-size: 1.25rem;
+  }
 }
