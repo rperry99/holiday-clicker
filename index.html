@@ -4,16 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Holiday Clicker</title>
   </head>
   <body>
     <nav>
-      <ul>
-        <li>Holiday Clicker</li>
-        <li onClick="GameReset()">New Game</li>
-      </ul>
+      <h1 class="title">Holiday Clicker</h1>
+      <p class="new-game" onClick="GameReset()">New Game</p>
     </nav>
+    <div id="game">
+      <div class="clicker-container">
+        <div class="clicker"></div>
+      </div>
+      <div id="upgrades">
+        <div class="upgrade"></div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
