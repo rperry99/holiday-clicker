@@ -13,4 +13,10 @@ You can view my live project [here](https://rperry99.github.io/holiday-clicker/)
 
 ---
 
+#### 11/26/19
+
+- Add basic click functionality
+
+---
+
 ## Credits

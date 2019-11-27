@@ -41,6 +41,7 @@ nav {
   width: 65%;
   height: calc(100vh - 90px);
   float: left;
+  position: relative;
 }
 .clicker {
   background: blue;
@@ -53,6 +54,17 @@ nav {
   overflow-y: scroll;
   width: 35%;
   float: right;
+}
+.count {
+  position: absolute;
+  top: 50px;
+  background: rgba(1, 32, 20, 0.8);
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 @media screen and (max-width: 426px) {
