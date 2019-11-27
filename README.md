@@ -19,4 +19,12 @@ You can view my live project [here](https://rperry99.github.io/holiday-clicker/)
 
 ---
 
+#### 11/27/19
+
+- Add first upgrade, just a regular upgrade to points per click
+- The button to purchase the upgrade is only enabled when you have enough money to purchase the upgrade.
+- The upgrade increases the points per click and when purchased, it decreses the amount of money you have.
+
+---
+
 ## Credits

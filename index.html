@@ -22,7 +22,20 @@
         <div class="clicker" onClick="CheerClick()"></div>
       </div>
       <div id="upgrades">
-        <div class="upgrade"></div>
+        <div class="upgrade upgrade-1">
+          <img src="#" alt="#" />
+          <p class="name">Mittens</p>
+          <p class="cost"><span id="mitten-span">10</span>&nbsp;&nbsp;cheer</p>
+          <button
+            onClick="addMittens()"
+            value="mittens"
+            id="mitten-btn"
+            disabled="true"
+          >
+            Buy
+          </button>
+          <p id="mitten-count">0</p>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
