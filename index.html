@@ -19,11 +19,13 @@
     <div id="game">
       <div class="clicker-container">
         <div class="count"><span id="cheer">0</span> &nbsp;&nbsp;cheer</div>
-        <div class="clicker" onClick="CheerClick()"></div>
+        <div class="clicker" onClick="CheerClick()">
+          <img id="tree-img" src="img/tree-bare.png" alt="bare tree" />
+        </div>
       </div>
       <div id="upgrades">
-        <div class="upgrade upgrade-1">
-          <img src="#" alt="#" />
+        <div class="upgrade">
+          <img src="img/mittens.png" alt="mittens" />
           <p class="name">Mittens</p>
           <p class="cost"><span id="mitten-span">10</span>&nbsp;&nbsp;cheer</p>
           <button
@@ -35,6 +37,20 @@
             Buy
           </button>
           <p id="mitten-count">0</p>
+        </div>
+        <div class="upgrade">
+          <img src="img/lights.png" alt="lights" />
+          <p class="name">Lights</p>
+          <p class="cost"><span id="light-span">100</span>&nbsp;&nbsp;cheer</p>
+          <button
+            onClick="addLights()"
+            value="lights"
+            id="light-btn"
+            disabled="true"
+          >
+            Buy
+          </button>
+          <p id="light-count">0</p>
         </div>
       </div>
     </div>

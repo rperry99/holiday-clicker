@@ -27,4 +27,11 @@ You can view my live project [here](https://rperry99.github.io/holiday-clicker/)
 
 ---
 
+#### 11/28/19
+
+- Change the upgrade effect per click
+- Increase the price of the mittens upgrade when you purchase one, and reflect that on the front end.
+
+---
+
 ## Credits

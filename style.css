@@ -44,9 +44,21 @@ nav {
   position: relative;
 }
 .clicker {
-  background: blue;
   height: 200px;
   width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clicker:hover {
+  cursor: pointer;
+}
+.clicker:active {
+  transform: scale(0.9);
+}
+#tree-img {
+  height: 100%;
+  width: auto;
 }
 #upgrades {
   height: calc(100vh - 90px);
@@ -70,7 +82,7 @@ nav {
 }
 
 .upgrade {
-  background: yellow;
+  background: tan;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -95,6 +107,10 @@ nav {
 .upgrade button:disabled {
   background: lightgray;
   color: gray;
+}
+.upgrade img {
+  height: 50px;
+  width: 50px;
 }
 
 .upgrade p:not(:last-child),
