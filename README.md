@@ -34,4 +34,11 @@ You can view my live project [here](https://rperry99.github.io/holiday-clicker/)
 
 ---
 
+#### 11/29/19
+
+- Add light functionality to increase cheer per second (This is currently not working as expected)
+- Fix resposnive issues.
+
+---
+
 ## Credits

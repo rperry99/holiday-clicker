@@ -21,6 +21,14 @@ const lightButton = document.getElementById("light-btn");
 const lightSpan = document.getElementById("light-span");
 const lightCountSpan = document.getElementById("light-count");
 
+// Initalize costs, cheer, etc.
+UpdateCheer(cheerSpan, cheer);
+UpdateCheer(mittenCountSpan, mittenCount);
+UpdateCheer(mittenSpan, mittenCost);
+UpdateCheer(lightCountSpan, lightCount);
+UpdateCheer(lightSpan, lightCost);
+checkButtons();
+
 // Array of buttons and array of costs
 let buttonArray = [mittenButton, lightButton];
 let costArray = [mittenCost, lightCost];
@@ -31,28 +39,44 @@ function GameReset() {}
 // Add cheer by clicking the tree
 function CheerClick() {
   //Update the cheer amount per click from mittens
-
   cheer += cheerPerClick;
   console.log(cheerPerClick);
-  checkButtons();
-  UpdateCheer();
+  UpdateCheer(cheerSpan, cheer);
 }
 
 // Update cheer count on front end
-function UpdateCheer() {
-  cheerSpan.innerHTML = Math.trunc(Number(cheer).toLocaleString("en"));
+function UpdateCheer(element, number) {
+  element.innerHTML = Number(Math.trunc(number)).toLocaleString("en");
+  checkButtons();
+}
+
+function idleUpgrades(count, multiplier) {
+  setInterval(function() {
+    cheer += count * multiplier;
+    UpdateCheer(cheerSpan, cheer);
+    console.log(cheer);
+  }, 1000);
 }
 
 // Upgrade amount of mittens
 function addMittens() {
   mittenCount += 1;
-  mittenCountSpan.innerHTML = mittenCount;
+  UpdateCheer(mittenCountSpan, mittenCount);
   cheerPerClick = cheerPerClick += mittenEffect;
   cheer -= mittenCost;
   mittenCost *= 2;
-  mittenSpan.innerHTML = mittenCost;
-  UpdateCheer();
-  checkButtons();
+  UpdateCheer(mittenSpan, mittenCost);
+  UpdateCheer(cheerSpan, cheer);
+}
+
+// Upgrade the amount of lights
+function addLights() {
+  lightCount++;
+  UpdateCheer(lightCountSpan, lightCount);
+  cheer -= lightCost;
+  idleUpgrades(lightCount, 1);
+  lightCost *= 2;
+  UpdateCheer(lightSpan, lightCost);
 }
 
 // Check to see if you can afford an upgrade function

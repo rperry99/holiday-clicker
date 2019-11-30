@@ -112,14 +112,26 @@ nav {
   height: 50px;
   width: 50px;
 }
-
+.info {
+  display: flex;
+  flex-direction: column;
+}
 .upgrade p:not(:last-child),
 .upgrade button,
 .upgrade img {
   margin-top: 14px;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 768px) {
+  #upgrades {
+    width: 50%;
+  }
+  .clicker-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 425px) {
   nav {
     flex-direction: column;
     justify-content: center;
@@ -135,7 +147,7 @@ nav {
     float: none;
     width: 100%;
   }
-  .upgrade {
+  #upgrades {
     float: none;
     width: 100%;
     min-height: 100vh;
