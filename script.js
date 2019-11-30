@@ -1,5 +1,5 @@
 // Variables for base costs
-let cheer = 0; //Cheer (currency)
+let cheer = 1000; //Cheer (currency)
 let cheerPerClick = 1; //How much cheer per click
 let upgradeCostIncrease = 0.5;
 let mittenCost = 10;
@@ -29,6 +29,11 @@ UpdateCheer(lightCountSpan, lightCount);
 UpdateCheer(lightSpan, lightCost);
 checkButtons();
 
+// Initialize the set timeout
+var idleLights = setInterval(function() {
+  cheer += 0;
+}, 1000);
+
 // Array of buttons and array of costs
 let buttonArray = [mittenButton, lightButton];
 let costArray = [mittenCost, lightCost];
@@ -50,14 +55,6 @@ function UpdateCheer(element, number) {
   checkButtons();
 }
 
-function idleUpgrades(count, multiplier) {
-  setInterval(function() {
-    cheer += count * multiplier;
-    UpdateCheer(cheerSpan, cheer);
-    console.log(cheer);
-  }, 1000);
-}
-
 // Upgrade amount of mittens
 function addMittens() {
   mittenCount += 1;
@@ -72,9 +69,13 @@ function addMittens() {
 // Upgrade the amount of lights
 function addLights() {
   lightCount++;
+  clearInterval(idleLights);
   UpdateCheer(lightCountSpan, lightCount);
   cheer -= lightCost;
-  idleUpgrades(lightCount, 1);
+  idleLights = setInterval(function() {
+    cheer += lightCount;
+    UpdateCheer(cheerSpan, cheer);
+  }, 1000);
   lightCost *= 2;
   UpdateCheer(lightSpan, lightCost);
 }
