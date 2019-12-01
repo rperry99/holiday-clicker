@@ -41,4 +41,18 @@ You can view my live project [here](https://rperry99.github.io/holiday-clicker/)
 
 ---
 
+#### 11/30/19
+
+- Fix the issue with the lights not getting you the right amount of cheer.
+
+---
+
+#### 12/1/19
+
+- Add small ornament upgrade (Same as lights but more effective)
+- Fix responsive issues with mobile
+- Adjust the size of the clicker to make it bigger
+
+---
+
 ## Credits

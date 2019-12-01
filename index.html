@@ -28,9 +28,7 @@
           <img src="img/mittens.png" alt="mittens" />
           <div class="info">
             <p class="name">Mittens</p>
-            <p class="cost">
-              <span id="mitten-span">10</span>&nbsp;&nbsp;cheer
-            </p>
+            <p class="cost"><span id="mitten-span">0</span>&nbsp;&nbsp;cheer</p>
           </div>
           <button
             onClick="addMittens()"
@@ -46,9 +44,7 @@
           <img src="img/lights.png" alt="lights" />
           <div class="info">
             <p class="name">Lights</p>
-            <p class="cost">
-              <span id="light-span">100</span>&nbsp;&nbsp;cheer
-            </p>
+            <p class="cost"><span id="light-span">0</span>&nbsp;&nbsp;cheer</p>
           </div>
           <button
             onClick="addLights()"
@@ -59,6 +55,24 @@
             Buy
           </button>
           <p id="light-count">0</p>
+        </div>
+        <div class="upgrade">
+          <img src="img/small-ornaments.png" alt="small-ornaments" />
+          <div class="info">
+            <p class="name">Small <br />Ornament</p>
+            <p class="cost">
+              <span id="small-ornament-span">0</span>&nbsp;&nbsp;cheer
+            </p>
+          </div>
+          <button
+            onClick="addSmallOrnaments()"
+            value="small-ornaments"
+            id="small-ornament-btn"
+            disabled="true"
+          >
+            Buy
+          </button>
+          <p id="small-ornament-count">0</p>
         </div>
       </div>
     </div>
