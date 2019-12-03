@@ -27,7 +27,7 @@
         <div class="upgrade">
           <img src="img/mittens.png" alt="mittens" />
           <div class="info">
-            <p class="name">Mittens</p>
+            <p class="name">Mittens <span id="mitten-count">0</span></p>
             <p class="cost"><span id="mitten-span">0</span>&nbsp;&nbsp;cheer</p>
           </div>
           <button
@@ -38,12 +38,11 @@
           >
             Buy
           </button>
-          <p id="mitten-count">0</p>
         </div>
         <div class="upgrade">
           <img src="img/lights.png" alt="lights" />
           <div class="info">
-            <p class="name">Lights</p>
+            <p class="name">Lights X <span id="light-count">0</span></p>
             <p class="cost"><span id="light-span">0</span>&nbsp;&nbsp;cheer</p>
           </div>
           <button
@@ -54,12 +53,13 @@
           >
             Buy
           </button>
-          <p id="light-count">0</p>
         </div>
         <div class="upgrade">
           <img src="img/small-ornaments.png" alt="small-ornaments" />
           <div class="info">
-            <p class="name">Small <br />Ornament</p>
+            <p class="name">
+              Small Ornament X <span id="small-ornament-count">0</span>
+            </p>
             <p class="cost">
               <span id="small-ornament-span">0</span>&nbsp;&nbsp;cheer
             </p>
@@ -72,7 +72,37 @@
           >
             Buy
           </button>
-          <p id="small-ornament-count">0</p>
+        </div>
+        <div class="upgrade">
+          <img src="img/large-ornaments.png" alt="large-ornaments" />
+          <div class="info">
+            <p class="name">
+              Large Ornament X <span id="large-ornament-count">0</span>
+            </p>
+            <p class="cost">
+              <span id="large-ornament-span">0</span>&nbsp;&nbsp;cheer
+            </p>
+          </div>
+
+          <button
+            onClick="addLargeOrnaments()"
+            value="large-ornaments"
+            id="large-ornament-btn"
+            disabled="true"
+          >
+            Buy
+          </button>
+        </div>
+        <div class="upgrade">
+          <img src="img/elf.png" alt="Elf" />
+          <div class="info">
+            <p class="name">Elf X <span id="elf-count">0</span></p>
+            <p class="cost"><span id="elf-span">0</span>&nbsp;&nbsp;cheer</p>
+          </div>
+
+          <button onClick="addElf()" value="elf" id="elf-btn" disabled="true">
+            Buy
+          </button>
         </div>
       </div>
     </div>

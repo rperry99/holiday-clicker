@@ -55,4 +55,12 @@ You can view my live project [here](https://rperry99.github.io/holiday-clicker/)
 
 ---
 
+#### 12/2/19
+
+- Add large ornament upgrade (Same as small ornament and lights but even more effective)
+- Adjust the way the upgrade count displays
+- Adjust the mobile video to reflect the count change
+- Add Elf upgrade (Increases the speed of the setInerval)
+- Remove the unecessary new game button
+
 ## Credits

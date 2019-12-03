@@ -131,6 +131,27 @@ nav {
 .upgrade img {
   margin-top: 14px;
 }
+.upgrade .name {
+  width: 150px;
+}
+.button-and-count {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-and-count button {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .upgrade .name {
+    width: 100px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   #upgrades {
@@ -142,6 +163,9 @@ nav {
 }
 
 @media screen and (max-width: 426px) {
+  html {
+    overflow: scroll;
+  }
   nav {
     flex-direction: column;
     justify-content: center;
@@ -162,5 +186,8 @@ nav {
     width: 100%;
     min-height: 100vh;
     max-height: max-content;
+  }
+  .upgrade .name {
+    width: 75px;
   }
 }
