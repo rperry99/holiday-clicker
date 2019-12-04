@@ -54,9 +54,7 @@ nav {
 .clicker {
   height: 70%;
   width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 .clicker:hover {
   cursor: pointer;
@@ -64,9 +62,31 @@ nav {
 .clicker:active {
   transform: scale(0.9);
 }
-#tree-img {
+.tree-img {
   height: 100%;
   width: auto;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  transform-origin: center;
+}
+.tree-img:not(.bare) {
+  display: none;
+}
+.elf {
+  z-index: 10;
+}
+.large {
+  z-index: 9;
+}
+.small {
+  z-index: 8;
+}
+.lights {
+  z-index: 7;
+}
+.bare {
+  z-index: 6;
 }
 #upgrades {
   height: calc(100vh - 90px);

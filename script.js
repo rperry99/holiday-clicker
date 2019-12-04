@@ -4,11 +4,13 @@ let cheerPerClick = 1; //How much cheer per click
 
 // Game elements
 const cheerSpan = document.getElementById("cheer"); //Element to display cheer
+const treeImage = document.getElementById("tree"); //The tree image
 
 // Upgrade Mittens
 let mittenCost = 10;
 let mittenCount = 0;
 let mittenEffect = 1;
+let mittenActive = false;
 const mittenButton = document.getElementById("mitten-btn");
 const mittenSpan = document.getElementById("mitten-span");
 const mittenCountSpan = document.getElementById("mitten-count");
@@ -16,33 +18,41 @@ const mittenCountSpan = document.getElementById("mitten-count");
 // Lights
 let lightCost = 100;
 let lightCount = 0;
+let lightActive = false;
 const lightButton = document.getElementById("light-btn");
 const lightSpan = document.getElementById("light-span");
 const lightCountSpan = document.getElementById("light-count");
+const lightTree = document.getElementById("light-tree");
 
 // Small Ornaments
 let smOrnamentCost = 1000;
 let smOrnamentCount = 0;
 let smOrnamentEffect;
+let smOrnamentActive = false;
 const smOrnamentButton = document.getElementById("small-ornament-btn");
 const smOrnamentSpan = document.getElementById("small-ornament-span");
 const smOrnamentCountSpan = document.getElementById("small-ornament-count");
+const smallTree = document.getElementById("small-tree");
 
 // Large Ornaments
 let lgOrnamentCost = 10000;
 let lgOrnamentCount = 0;
 let lgOrnamentEffect;
+let lgOrnamentActive = false;
 const lgOrnamentButton = document.getElementById("large-ornament-btn");
 const lgOrnamentSpan = document.getElementById("large-ornament-span");
 const lgOrnamentCountSpan = document.getElementById("large-ornament-count");
+const largeTree = document.getElementById("large-tree");
 
 // Elves
 let elfCost = 50000;
 let elfCount = 0;
 let elfEffect;
+let elfActive = false;
 const elfButton = document.getElementById("elf-btn");
 const elfSpan = document.getElementById("elf-span");
 const elfCountSpan = document.getElementById("elf-count");
+const elfTree = document.getElementById("elf-tree");
 
 // Initialize the setInterval
 let idleUpgrade = 0;
@@ -94,6 +104,9 @@ function addMittens() {
 // Upgrade the amount of lights
 function addLights() {
   lightCount++;
+  if (lightCount === 1) {
+    lightTree.style.display = "block";
+  }
   UpdateCheer(lightCountSpan, lightCount);
   cheer -= lightCost;
   idleUpgrade += 1;
@@ -103,6 +116,9 @@ function addLights() {
 
 function addSmallOrnaments() {
   smOrnamentCount++;
+  if (smOrnamentCount === 1) {
+    smallTree.style.display = "block";
+  }
   UpdateCheer(smOrnamentCountSpan, smOrnamentCount);
   idleUpgrade += 10;
   cheer -= smOrnamentCost;
@@ -112,6 +128,9 @@ function addSmallOrnaments() {
 
 function addLargeOrnaments() {
   lgOrnamentCount++;
+  if (lgOrnamentCount === 1) {
+    largeTree.style.display = "block";
+  }
   UpdateCheer(lgOrnamentCountSpan, lgOrnamentCount);
   idleUpgrade += 100;
   cheer -= lgOrnamentCost;
@@ -121,6 +140,9 @@ function addLargeOrnaments() {
 
 function addElf() {
   elfCount++;
+  if (elfCount === 1) {
+    elfTree.style.display = "block";
+  }
   UpdateCheer(elfCountSpan, elfCount);
   if (elfCount < 15) {
     idleTime -= 10;

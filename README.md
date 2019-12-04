@@ -63,4 +63,15 @@ You can view my live project [here](https://rperry99.github.io/holiday-clicker/)
 - Add Elf upgrade (Increases the speed of the setInerval)
 - Remove the unecessary new game button
 
+---
+
+#### 12/3/19
+
+- Add the rest of the images
+- Make the tree dynamically change depending on what upgrade you have
+
+---
+
 ## Credits
+
+- "art" by me
