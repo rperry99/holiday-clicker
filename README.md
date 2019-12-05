@@ -72,6 +72,11 @@ You can view my live project [here](https://rperry99.github.io/holiday-clicker/)
 
 ---
 
+#### 12/4/19
+
+- Made the idle upgrades quicker, the game felt too slow
+- Added some rounded edges to the buttons to not make them look so sharp.
+
 ## Credits
 
 - "art" by me

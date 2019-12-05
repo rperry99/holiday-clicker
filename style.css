@@ -60,7 +60,7 @@ nav {
   cursor: pointer;
 }
 .clicker:active {
-  transform: scale(0.9);
+  transform: scale(0.98);
 }
 .tree-img {
   height: 100%;
@@ -109,6 +109,7 @@ nav {
   align-items: center;
   color: white;
   z-index: 1000;
+  border-radius: 10px;
 }
 
 .upgrade {
@@ -126,6 +127,7 @@ nav {
   height: 40px;
   border: none;
   outline: none;
+  border-radius: 10px;
 }
 .upgrade button:enabled {
   background: rgb(1, 32, 20);

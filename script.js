@@ -56,7 +56,7 @@ const elfTree = document.getElementById("elf-tree");
 
 // Initialize the setInterval
 let idleUpgrade = 0;
-let idleTime = 1500;
+let idleTime = 1000;
 setInterval(function() {
   cheer += idleUpgrade;
   UpdateCheer(cheerSpan, cheer);
@@ -144,7 +144,7 @@ function addElf() {
     elfTree.style.display = "block";
   }
   UpdateCheer(elfCountSpan, elfCount);
-  if (elfCount < 15) {
+  if (idleTime >= 100) {
     idleTime -= 10;
   }
   cheer -= elfCost;
@@ -187,7 +187,7 @@ function checkButtons() {
   } else {
     elfButton.disabled = true;
   }
-  if (elfCount >= 150) {
+  if (idleTime <= 100) {
     elfButton.innerHTML = "Maxed";
   }
 }
